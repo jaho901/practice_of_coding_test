@@ -38,11 +38,12 @@ result = 99
 if len(n) <= 2:
     result = n
 
-elif len(n) == 3:
+elif len(n) <= 4:
     while num >= 100:
         if int(n[0]) - int(n[1]) == int(n[1]) - int(n[2]):
             result += 1
         num -= 1
+        n = str(int(n)-1)
 
 print(result)
 
