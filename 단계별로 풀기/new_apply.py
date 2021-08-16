@@ -95,8 +95,9 @@ number.sort()
 result = []
 i = 0
 j = 1
+k = len(number)//2
 
-while len(number) != 0:
+while k != 0:
     lenght = [0, len(result)+2]
 
     result.insert(lenght[i], number[-1])
@@ -106,6 +107,14 @@ while len(number) != 0:
 
     i = (i + 1) % 2
     j = (j + 1) % 2
+    k -= 1
+
+if len(number)%2 != 0:
+    if abs(number[0] - result[0]) > abs(number[0] - result[-1]):
+        result.insert(0, number[0])
+    else:
+        result.insert(len(result)+1, number[0])
+
     
 summ = 0
 for i in range(len(result)-1):

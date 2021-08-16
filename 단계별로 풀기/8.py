@@ -1,6 +1,6 @@
 ## 1712
 # 손익분기점
-
+'''
 A, B, C = map(int, input().split())
 
 if C > B:
@@ -10,9 +10,12 @@ else:
     result = -1
 
 print(int(result))
+'''
 
 
-
+## 2292
+# 벌집
+N = int(input())
 
 
 
