@@ -92,7 +92,7 @@ for tc in range(1, T+1):
     print(result)
 '''
 
-    '''
+'''
     for w in range(1, W+1):
         for h in range(1, H+1):
             result.append((w, h))
@@ -111,6 +111,56 @@ for tc in range(1, T+1):
         result = '{0}{1}'.format(h, w)
     print(result)
     '''
+
+## 2775
+# 부녀회장이 될테야
+'''
+T = int(input())
+for tc in range(1, T+1):
+    k = int(input())
+    n = int(input())
+    
+    f0 = [x for x in range(1, n+1)]
+
+    for i in range(k):
+        for j in range(1, n):
+            f0[j] += f0[j-1]
+    print(f0[n-1])
+'''
+
+## 2839
+# 설탕 배달
+'''
+N = int(input())
+cnt = 0
+while True:
+    if N % 5 == 0:
+        cnt += N // 5
+        print(cnt)
+        break
+
+    N -= 3
+    cnt += 1
+
+    if N < 0:
+        print(-1)
+        break
+'''
+
+t = int(input())
+
+for _ in range(t):
+    x, y = map(int,input().split())
+    distance = y - x
+    count = 0  # 이동 횟수
+    move = 1  # count별 이동 가능한 거리
+    move_plus = 0  # 이동한 거리의 합
+    while move_plus < distance :
+        count += 1
+        move_plus += move  # count 수에 해당하는 move를 더함
+        if count % 2 == 0 :  # count가 2의 배수일 때, 
+            move += 1  
+    print(count)
 
 
 
