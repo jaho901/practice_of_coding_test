@@ -1,6 +1,9 @@
 import sys
 sys.stdin = open('2527.txt')
 
+# 이건 수학문제! 풀지말자!
+# 밑에꺼는 퍼왔음...ㅎㅎ
+
 for i in range(4):
     x1, y1, p1, q1, x2, y2, p2, q2 = map(int, input().split())
     # //1번 과정 
