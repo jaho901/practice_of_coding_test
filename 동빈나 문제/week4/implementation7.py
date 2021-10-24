@@ -17,8 +17,8 @@ for x in range(len(arr)):
             index_2.append([x, y])
         if arr[x][y] == 1:
             index_1.append([x, y])
-# print(index_1)
-# print(index_2)
+print(index_1)
+print(index_2)
 num = list(range(len(index_2)))
 chi_list = []
 sub = []
@@ -43,7 +43,7 @@ def choose(cur, cnt):
 
 choose(0, 0)
 # chi_list = list(combinations(num, 2))
-# print(chi_list)
+print(chi_list)
 
 def distance(idx_1, chi):
     minimum_1 = 1e9
